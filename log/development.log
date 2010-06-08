@@ -1,0 +1,769 @@
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (219.0ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `schema_migrations`[0m
+  [4;36;1mSQL (235.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to DeviseCreateUsers (20100608100801)
+  [4;35;1mSQL (110.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (171.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (219.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (250.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100608100801')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 15:48:21) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering sessions/new
+Rendered shared/_devise_links (31.0ms)
+Completed in 1343ms (View: 218, DB: 0) | 200 OK [http://localhost/users/sign_in]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'sanjay.s@multiesolutions.com') LIMIT 1[0m
+  [4;36;1mUser Create (15.0ms)[0m   [0;1mINSERT INTO `users` (`encrypted_password`, `confirmed_at`, `last_sign_in_ip`, `updated_at`, `last_sign_in_at`, `password_salt`, `confirmation_sent_at`, `sign_in_count`, `current_sign_in_ip`, `current_sign_in_at`, `remember_token`, `confirmation_token`, `reset_password_token`, `email`, `remember_created_at`, `created_at`) VALUES('6fb5b7ec700dfe67ddac79e48c5b380a59071733', NULL, NULL, '2010-06-08 10:20:19', NULL, 'xi_aJ9ICHey8_QmJsmUm', NULL, 0, NULL, NULL, NULL, NULL, NULL, 'sanjay.s@multiesolutions.com', NULL, '2010-06-08 10:20:19')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCOMMIT[0m
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-06-08 15:51:25) [POST]
+  Parameters: {"user"=>{"password"=>"sanjay", "remember_me"=>"0", "email"=>"sanjay.s@multiesolutions.com"}, "commit"=>"Sign in", "authenticity_token"=>"JU08XRGZME7LYkFdxBWMrcx8rkgfcsnFJFl2oEsSsqs="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'sanjay.s@multiesolutions.com') LIMIT 1[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `last_sign_in_at` = '2010-06-08 10:21:26', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_at` = '2010-06-08 10:21:26', `sign_in_count` = 1, `current_sign_in_ip` = '127.0.0.1', `updated_at` = '2010-06-08 10:21:26' WHERE `id` = 1[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 875ms (DB: 47) | 302 Found [http://localhost/users/sign_in]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PasswordsController#new (for 127.0.0.1 at 2010-06-08 15:54:34) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 47ms (DB: 15) | 302 Found [http://localhost/users/password/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-06-08 15:54:45) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 47ms (DB: 16) | 302 Found [http://localhost/users/sign_up]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:14:11) [GET]
+Rendering sessions/new
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+
+ActionView::TemplateError (undefined local variable or method `resource_name' for #<ActionView::Base:0x482829c>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+4:   <p><%= f.label :email %></p>
+5:   <p><%= f.text_field :email %></p>
+6: 
+
+    app/views/sessions/new.html.erb:3
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (6922.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#sign_in (for 127.0.0.1 at 2010-06-08 16:16:42) [GET]
+
+NameError (uninitialized constant UsersController):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-06-08 16:17:54) [GET]
+
+NameError (uninitialized constant UserController):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (187.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-06-08 16:17:57) [GET]
+
+NameError (uninitialized constant UserController):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-06-08 16:18:02) [GET]
+
+NameError (uninitialized constant UserController):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (266.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:19:15) [GET]
+Rendering sessions/new
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (344.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+
+ActionView::TemplateError (undefined local variable or method `resource_name' for #<ActionView::Base:0x441ae0c>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+4:   <p><%= f.label :email %></p>
+5:   <p><%= f.text_field :email %></p>
+6: 
+
+    app/views/sessions/new.html.erb:3
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (31.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:19:46) [GET]
+Rendering sessions/new
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+
+ActionView::TemplateError (undefined local variable or method `resource_name' for #<ActionView::Base:0x4699a98>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+4:   <p><%= f.label :email %></p>
+5:   <p><%= f.text_field :email %></p>
+6: 
+
+    app/views/sessions/new.html.erb:3
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (218.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:19:55) [GET]
+Rendering sessions/new
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+
+ActionView::TemplateError (undefined local variable or method `resource_name' for #<ActionView::Base:0x46e8f1c>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+4:   <p><%= f.label :email %></p>
+5:   <p><%= f.text_field :email %></p>
+6: 
+
+    app/views/sessions/new.html.erb:3
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (484.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:22:03) [GET]
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `resource_name' for #<ActionView::Base:0x4768dd4>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+4:   <p><%= f.label :email %></p>
+5:   <p><%= f.text_field :email %></p>
+6: 
+
+    app/views/sessions/new.html.erb:3
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (453.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:22:14) [GET]
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `resource_name' for #<ActionView::Base:0x4858974>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+4:   <p><%= f.label :email %></p>
+5:   <p><%= f.text_field :email %></p>
+6: 
+
+    app/views/sessions/new.html.erb:3
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:32:10) [GET]
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `resource_name' for #<ActionView::Base:0x441900c>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+4:   <p><%= f.label :email %></p>
+5:   <p><%= f.text_field :email %></p>
+6: 
+
+    app/views/sessions/new.html.erb:3
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (297.0ms)
+Rendered rescues/_request_and_response (31.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-08 16:32:17) [GET]
+
+NameError (uninitialized constant PostController):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (547.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:32:28) [GET]
+
+ActionView::MissingTemplate (Missing template posts/index.erb in view path app/views:c:/ruby/lib/ruby/gems/1.8/gems/devise-1.0.7/app/views):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:33:31) [GET]
+Rendering posts/index
+Completed in 297ms (View: 297, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:35:36) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 47ms (View: 31, DB: 15) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:35:38) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:36:06) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `resource_name' for #<ActionView::Base:0x47d761c>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+4:   <p><%= f.label :email %></p>
+5:   <p><%= f.text_field :email %></p>
+6: 
+
+    app/views/sessions/new.html.erb:3
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (547.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:36:45) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (78.0ms)
+Completed in 2703ms (View: 2656, DB: 16) | 200 OK [http://localhost/users/sign_in]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:36:50) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Completed in 109ms (View: 62, DB: 0) | 200 OK [http://localhost/users/sign_in]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:36:53) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Completed in 250ms (View: 172, DB: 16) | 200 OK [http://localhost/users/sign_in]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:37:41) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Completed in 281ms (View: 187, DB: 16) | 200 OK [http://localhost/users/sign_in]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:37:42) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Completed in 594ms (View: 141, DB: 16) | 200 OK [http://localhost/users/sign_in]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:37:48) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:37:51) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (16.0ms)
+Completed in 203ms (View: 156, DB: 0) | 200 OK [http://localhost/users/sign_in]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:38:58) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 328ms (View: 328, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:40:25) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 94ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-06-08 16:40:28) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (16.0ms)
+Completed in 266ms (View: 219, DB: 31) | 200 OK [http://localhost/users/sign_up]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:40:31) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Completed in 157ms (View: 94, DB: 0) | 200 OK [http://localhost/users/sign_in]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-06-08 16:40:46) [POST]
+  Parameters: {"user"=>{"password"=>"sanjay", "remember_me"=>"0", "email"=>"sanjay.s@multiesolutions.com"}, "commit"=>"Sign in", "authenticity_token"=>"SaYDxtwvNKFQXQEzFUEXrPvu/rsVr0kQZd2nPgBsc5Q="}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'sanjay.s@multiesolutions.com') LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `current_sign_in_at` = '2010-06-08 11:10:47', `sign_in_count` = 2, `updated_at` = '2010-06-08 11:10:47' WHERE `id` = 1[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW TABLES[0m
+
+NameError (undefined local variable or method `root_path' for #<SessionsController:0x46b2de0>):
+  devise (1.0.7) lib/devise/controllers/helpers.rb:121:in `after_sign_in_path_for'
+  devise (1.0.7) lib/devise/controllers/helpers.rb:143:in `sign_in_and_redirect'
+  devise (1.0.7) app/controllers/sessions_controller.rb:21:in `create'
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (187.0ms)
+Rendered rescues/_request_and_response (32.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-06-08 16:43:56) [POST]
+  Parameters: {"user"=>{"password"=>"sanjay", "remember_me"=>"0", "email"=>"sanjay.s@multiesolutions.com"}, "commit"=>"Sign in", "authenticity_token"=>"SaYDxtwvNKFQXQEzFUEXrPvu/rsVr0kQZd2nPgBsc5Q="}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 125ms (DB: 15) | 302 Found [http://localhost/users/sign_in]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:43:56) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 156ms (View: 141, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-06-08 16:44:43) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+Redirected to http://localhost:3000/
+Completed in 110ms (DB: 16) | 302 Found [http://localhost/users/sign_out]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:44:43) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 15ms (View: 15, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-06-08 16:44:45) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (31.0ms)
+Completed in 250ms (View: 203, DB: 16) | 200 OK [http://localhost/users/sign_up]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-06-08 16:45:10) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"sanjay", "password"=>"sanjay", "email"=>"sanjay_mes@uahoo.in"}, "commit"=>"Sign up", "authenticity_token"=>"SaYDxtwvNKFQXQEzFUEXrPvu/rsVr0kQZd2nPgBsc5Q="}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'sanjay_mes@uahoo.in') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`encrypted_password`, `confirmed_at`, `last_sign_in_ip`, `updated_at`, `last_sign_in_at`, `password_salt`, `confirmation_sent_at`, `sign_in_count`, `current_sign_in_ip`, `current_sign_in_at`, `remember_token`, `confirmation_token`, `reset_password_token`, `email`, `remember_created_at`, `created_at`) VALUES('739f7677952c7163eaf0e8f9677d5807b5cca8ba', NULL, NULL, '2010-06-08 11:15:11', NULL, 'sdgZV19Vr1whQ4X1yG5S', NULL, 0, NULL, NULL, NULL, NULL, NULL, 'sanjay_mes@uahoo.in', NULL, '2010-06-08 11:15:11')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (15.0ms)[0m   [0;1mUPDATE `users` SET `last_sign_in_at` = '2010-06-08 11:15:11', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_at` = '2010-06-08 11:15:11', `sign_in_count` = 1, `current_sign_in_ip` = '127.0.0.1', `updated_at` = '2010-06-08 11:15:12' WHERE `id` = 2[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 1672ms (DB: 108) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:45:12) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 78ms (View: 46, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-06-08 16:45:45) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+Redirected to http://localhost:3000/
+Completed in 109ms (DB: 16) | 302 Found [http://localhost/users/sign_out]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:45:45) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:49:58) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:49:58) [GET]
+  Parameters: {"unauthenticated"=>"true"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (16.0ms)
+Completed in 188ms (View: 141, DB: 15) | 200 OK [http://localhost/users/sign_in?unauthenticated=true]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-06-08 16:50:12) [POST]
+  Parameters: {"user"=>{"password"=>"sanjay", "remember_me"=>"0", "email"=>"sanjay.s@multiesolutions.com"}, "commit"=>"Sign in", "authenticity_token"=>"SaYDxtwvNKFQXQEzFUEXrPvu/rsVr0kQZd2nPgBsc5Q="}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'sanjay.s@multiesolutions.com') LIMIT 1[0m
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `last_sign_in_at` = '2010-06-08 11:10:47', `current_sign_in_at` = '2010-06-08 11:20:12', `sign_in_count` = 3, `updated_at` = '2010-06-08 11:20:12' WHERE `id` = 1[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 156ms (DB: 78) | 302 Found [http://localhost/users/sign_in]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:50:13) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 94ms (View: 31, DB: 32) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:50:16) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 156ms (View: 46, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:50:19) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering posts/index
+Completed in 453ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-06-08 16:50:21) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+Redirected to http://localhost:3000/
+Completed in 187ms (DB: 31) | 302 Found [http://localhost/users/sign_out]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:50:21) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:50:21) [GET]
+  Parameters: {"unauthenticated"=>"true"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Completed in 109ms (View: 62, DB: 0) | 200 OK [http://localhost/users/sign_in?unauthenticated=true]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-08 16:50:26) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:50:26) [GET]
+  Parameters: {"unauthenticated"=>"true"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (16.0ms)
+Completed in 157ms (View: 47, DB: 47) | 200 OK [http://localhost/users/sign_in?unauthenticated=true]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PasswordsController#new (for 127.0.0.1 at 2010-06-08 16:53:32) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering passwords/new
+Rendered shared/_devise_links (0.0ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/users/password/new]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PasswordsController#create (for 127.0.0.1 at 2010-06-08 16:53:57) [POST]
+  Parameters: {"user"=>{"email"=>"sanjay.s@multiesolutions.com"}, "commit"=>"Send me reset password instructions", "authenticity_token"=>"SaYDxtwvNKFQXQEzFUEXrPvu/rsVr0kQZd2nPgBsc5Q="}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'sanjay.s@multiesolutions.com') LIMIT 1[0m
+  [4;36;1mUser Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `reset_password_token` = 'Skkd08sYpQv7ZtFN-Wcc', `updated_at` = '2010-06-08 11:23:57' WHERE `id` = 1[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mCOMMIT[0m
+Sent mail to sanjay.s@multiesolutions.com
+
+Date: Tue, 8 Jun 2010 16:53:57 +0530
+From: please-change-me@config-initializers-devise.com
+To: sanjay.s@multiesolutions.com
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Hello sanjay.s@multiesolutions.com!</p>
+
+<p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=Skkd08sYpQv7ZtFN-Wcc">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+Redirected to http://localhost:3000/users/sign_in
+Completed in 2328ms (DB: 141) | 302 Found [http://localhost/users/password]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-08 16:53:59) [GET]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from c:/Documents and Settings/sanjay/Desktop/devise_app/app/models/user.rb:4)
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Completed in 125ms (View: 62, DB: 15) | 200 OK [http://localhost/users/sign_in]

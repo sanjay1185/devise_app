@@ -6,9 +6,11 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.recoverable
       t.rememberable
       t.trackable
-      # t.lockable
-
+      t.lockable
+      t.registrable
       t.timestamps
+      t.validatabale
+      t.timeoutable
     end
 
     add_index :users, :email,                :unique => true
